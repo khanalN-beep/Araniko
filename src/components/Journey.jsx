@@ -4,32 +4,31 @@ import Team from "./Team";
 const Journey = () => {
   return (
     <>
-      <div className="flex h-64 mt-30">
-        <div className="w-1/2 bg-teal-600 p-8 flex flex-col justify-center">
-          <h2 className="text-white text-2xl font-bold mb-2">
+      <div className="flex h-100 mt-30 font-serif">
+        <div className="w-1/2 bg-teal-600 p-8 flex flex-col justify-center ">
+          <h2 className="text-white ml-20 text-3xl font-bold mb-2">
             Start your Learning
           </h2>
-          <h2 className="text-white text-2xl font-bold mb-6">Journey Today!</h2>
+          <h2 className="text-white ml-20 text-2xl font-bold mb-6">
+            Journey Today!
+          </h2>
 
-          <div className="flex gap-4 mt-4">
-            <button className="bg-gray-800 text-white py-2 px-6 rounded font-medium">
+          <div className="flex gap-4 mt-4 ml-20 ">
+            <button className="bg-gray-800 w-30 text-white py-2 px-6 rounded font-medium h-12 cursor-pointer hover:bg-gray-700">
               BBA
             </button>
-            <button className="bg-white text-gray-800 py-2 px-6 rounded font-medium">
+            <button className="bg-white w-30 text-gray-800 py-2 px-6 rounded font-medium ml-2 cursor-pointer ">
               BCA
             </button>
           </div>
         </div>
-
-        {/* Right panel - dark blue background */}
         <div className="w-1/2 bg-gray-900 p-8 flex flex-col justify-center">
           <div className="space-y-6">
-            {/* Card 1 */}
-            <div className="bg-white rounded-lg p-4 text-gray-800">
+            <div className="bg-white w-120 rounded-lg p-4 text-gray-800 ml-20">
               <div className="flex items-start">
-                <div className="bg-green-100 rounded-full p-1 mr-3">
+                <div className="bg-green-100 ml-5 mt-2 rounded-full p-3 mr-4">
                   <svg
-                    className="w-5 h-5 text-green-600"
+                    className="w-8 h-8 text-green-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -44,21 +43,22 @@ const Journey = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800">BBA @ Araniko</h3>
-                  <p className="text-sm text-gray-600 mt-1">
-                    Bachelor of Business Administration deals with Business
-                    Management.
+                  <h3 className="font-bold text-gray-800 ml-8 text-3xl">
+                    BBA @ Araniko
+                  </h3>
+                  <p className="text-sm text-gray-600 mt-1 ml-8">
+                    Bachelor of Business Administration deals with
+                    <br /> Business Management.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-white rounded-lg p-4 text-gray-800">
+            <div className="bg-white w-120  rounded-lg ml-20 p-4 text-gray-800">
               <div className="flex items-start">
-                <div className="bg-green-100 rounded-full p-1 mr-3">
+                <div className="bg-green-100 ml-5 mt-2 rounded-full p-3 mr-4">
                   <svg
-                    className="w-5 h-5 text-green-600"
+                    className="w-8 h-8 text-green-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -73,10 +73,12 @@ const Journey = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-800">BCA @ Araniko</h3>
-                  <p className="text-sm text-gray-600 mt-1">
-                    BCA is a new age degree course in the field of computer
-                    applications.
+                  <h3 className="font-bold text-gray-800 text-3xl ml-8">
+                    BCA @ Araniko
+                  </h3>
+                  <p className="text-sm text-gray-600 mt-1 ml-8">
+                    BCA is a new age degree course in the field of <br />
+                    computer applications.
                   </p>
                 </div>
               </div>
@@ -85,7 +87,7 @@ const Journey = () => {
         </div>
       </div>
       <div>
-        <Team/>
+        <Team />
       </div>
     </>
   );

@@ -1,9 +1,62 @@
 import React from "react";
-import man from "../../assets/man.png"; // Ensure the path is correct
+import man from "../../assets/man.png";
+import spark from "../../assets/spark.jpg";
+import { useNavigate } from "react-router-dom";
+
 
 const BlogPage = () => {
+
+
+  const navigate = useNavigate();
+
+  const handelClick = () => {
+    navigate("/Button");
+  };
+
+  const click = () => {
+    navigate("/Contact");
+  };
+
+  const tick = () => {
+    navigate("/Galary");
+  };
+
+  const homeclick = () => {
+    navigate("/home");
+  };
   return (
     <div className="min-h-screen bg-gray-100">
+      {/* Header Section */}
+      <div className="flex justify-between items-center px-8 py-4">
+        <div className="flex items-center gap-4">
+          <img src={spark} alt="Araniko College Logo" className="h-18 w-80" />
+        </div>
+
+        <div className="flex items-center gap-8">
+          <nav>
+            <ul className="flex gap-6 font-bold">
+              <li onClick={homeclick} className="cursor-pointer">
+                Home
+              </li>
+              <li>About Us</li>
+              <li>Faculty</li>
+              <li onClick={tick} className="cursor-pointer">
+                Gallery
+              </li>
+              <li onClick={click} className="cursor-pointer">
+                Contact Us
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button
+          onClick={handelClick}
+          className="px-4 py-2 rounded bg-[rgb(21,50,67)] text-white cursor-pointer hover:bg-[rgb(20,40,57)]"
+        >
+          Login
+        </button>
+      </div>
+
       {/* Header with Image */}
       <header className="relative">
         <img
@@ -140,7 +193,7 @@ const BlogPage = () => {
           </p>
         </section>
 
-        {/* Call to Action */}
+        {/* Action */}
         <section className="bg-teal-600 text-white p-8 rounded-lg text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Enjoyed the Article?</h2>
           <p className="text-lg mb-6">
@@ -195,7 +248,7 @@ const BlogPage = () => {
                 </ul>
               </div>
 
-              {/* Student Corner */}
+              {/* Student*/}
               <div>
                 <h3 className="font-semibold text-lg mb-4">Student Corner</h3>
                 <ul className="space-y-2">

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import spark from"../assets/spark.jpg"
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
+import Lorem from "./Pages/Lorem";
 
 
 const Myhome = () => {
@@ -19,7 +20,7 @@ const Myhome = () => {
   }
 
   const tick = () =>{
-    navigate("/Galary");
+    navigate("/lorem");
   }
 
   const homeclick = () =>{
@@ -41,10 +42,10 @@ const Myhome = () => {
           <div className="flex items-center gap-8">
             <nav>
               <ul className="flex gap-6 font-bold">
-                <li onClick={homeclick} className="cursor-pointer">Home</li>
-                <li>About Us</li>
+                <li >Home</li>
+                <li onClick={homeclick} className="cursor-pointer">About Us</li>
                 <li>Faculty</li>
-                <li onClick={tick}className="cursor-pointer">Gallery</li>
+                <li onClick={tick} className="cursor-pointer">Gallery</li>
                 <li onClick={click} className="cursor-pointer">Contact Us</li>
               </ul>
             </nav>

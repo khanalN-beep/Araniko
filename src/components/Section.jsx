@@ -19,15 +19,15 @@ const Section = () => {
           </h1>
         </div>
 
-        <div className="flex justify-center space-x-4 border-none text ">
+        <div className="flex justify-center space-x-4 border-none text" >
           {stats.map((stat, index) => (
             <div
               key={index}
               className={`
               text-center 
+              shadow-2xl
               p-4 
               rounded-lg 
-              shadow-md
               w-70
               h-60 
               flex 
@@ -37,12 +37,12 @@ const Section = () => {
               cursor-pointer
               transition duration-300
               mt-12
-              hover:text-white
+             
 
               ${
                 stat.highlighted
-                  ? "bg-teal-600 text-white"
-                  : "bg-white hover:bg-teal-600 hover:text-white"
+                  ? "bg-white hover:bg-teal-600 "
+                  : "bg-white hover:bg-teal-600 "
               }
             `}
             >
@@ -52,15 +52,17 @@ const Section = () => {
               <div>
                 <h2
                   className={`text-3xl font-bold ${
-                    stat.highlighted ? "text-white"  : "text-black hover:text-white"
+                    stat.highlighted ? "text-black" : "text-black"
                   }`}
                 >
                   {stat.value}
                 </h2>
                 <p
                   className={`text-sm ${
-                    stat.highlighted ? "text-white opacity-80" : "text-black hover:text-white"
-                  }`}   
+                    stat.highlighted
+                      ? "text-black opacity-80"
+                      : "text-black"
+                  }`}
                 >
                   {stat.label}
                 </p>

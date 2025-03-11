@@ -1,10 +1,59 @@
 import React from "react";
 import tele from "../../assets/tele.png";
-
+import spark from "../../assets/spark.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
+
+  const handelClick = () => {
+    navigate("/Button");
+  };
+
+  const click = () => {
+    navigate("/Contact");
+  };
+
+  const tick = () => {
+    navigate("/Lorem");
+  };
+
+  const homeclick = () => {
+    navigate("/home");
+  };
   return (
     <div className="font-sans">
+      {/*Header Section */}
+      <div className="flex justify-between items-center px-8 py-4">
+        <div className="flex items-center gap-4">
+          <img src={spark} alt="Araniko College Logo" className="h-18 w-80" />
+        </div>
+
+        <div className="flex items-center gap-8">
+          <nav>
+            <ul className="flex gap-6 font-bold">
+              <li>
+                Home
+              </li>
+              <li onClick={homeclick} className="cursor-pointer">About Us</li>
+              <li>Faculty</li>
+              <li onClick={tick} className="cursor-pointer">
+                Gallery
+              </li>
+              <li onClick={click} className="cursor-pointer">
+                Contact Us
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button
+          onClick={handelClick}
+          className="px-4 py-2 rounded bg-[rgb(21,50,67)] text-white cursor-pointer hover:bg-[rgb(20,40,57)]"
+        >
+          Login
+        </button>
+      </div>
+
       {/* Contact Info Section */}
       <div className="flex justify-center py-8  bg-amber-100">
         <div className="flex justify-between w-full max-w-4xl ">

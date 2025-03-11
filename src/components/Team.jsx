@@ -3,8 +3,8 @@ import lala from "../assets/lala.png";
 import women from "../assets/women.png";
 import aijiz from "../assets/aijiz.png";
 import boy from "../assets/boy.png";
-import Footer from "./Footer";
 import girl1 from "../assets/girl1.png";
+import Images from "./Images";
 
 
 
@@ -270,7 +270,7 @@ const Team = () => {
         </div>
       </div>
       <div>
-        <Footer/>
+        <Images/>
       </div>
     </>
   );
